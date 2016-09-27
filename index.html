@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coding Challenge: Autocomplete (Nora Michalski, Sep 2016)</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="A single page app that allows us users to search for financial institutions of their interest.">
+    <meta name="author" content="Nora Michalski">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoon level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- My Style Sheet -->
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <!-- Instructions
+ 
+		Write a single page app that allows us users to search for financial institutions of their interest. You will be provided a data feed that contains a list of financial institutions in a json format (sample format below). The app should contain a text input. When the user enters some text into the text input, the app should use the provided data feed to search product names for the term the user entered into the text input. When the results are returned you should display the results in the same page. We don't expect the results to look gorgeous, but some thought should be put into how the results are displayed so they are understandable by the user and follow responsive layout. Here are few guidelines for user interaction and design.
+		 
+		Each product has a type such as bank, credit card, etc. Use this data to further organize search results.
+		 
+		Additional Requirements
+		You may use a javascript library like jQuery, angular, etc. to do DOM manipulation and make AJAX requests as well as any plugins you like that provide additional interesting functionality. You may not use any plugin that already does for you a core part of this challenge, specifically, no autocomplete plugins.
+		 
+		Deliverables
+		A github repo containing all html, css and js files you are using in the project as well as a readme.md with any additional notes you want us to consider. -->
+
+    <div class="container-fluid">
+        <h1>BROWSE OUR PRODUCTS</h1>
+        <main>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-5 col-lg-offset-3 col-lg-5 pt20">
+                    <form id="autoCompleteForm">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for..." id="autocomplete" placeholder="Product name" name="search">
+                            <span class="input-group-btn">
+        <button class="btn btn-secondary purple" type="button">Search</button>
+      </span>
+                        </div>
+                    </form>
+                    <ul id="suggestions" class="list-group"></ul>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+
+
+
+
+    <!-- JAVASCRIPT FILES -->
+    <!-- JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <!-- BootStrap JS 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <!-- My Javascript File -->
+    <script src="main.js"></script>
+</body>
+
+</html>
